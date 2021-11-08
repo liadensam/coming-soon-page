@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Book Flip</title>
+  </head>
+  <body>
+    <main class="main">
+      <p class="zero">0</p>
+      <p class="one">1</p>
+      <p class="two">2</p>
+      <p class="three">3</p>
+    </main>
+    <button class="btn" onclick="toggleNumb()">hide numbers</button>
+
+    <div class="container">
+      <div class="content">
+        <ul>
+          <li>
+            <div class="book">
+              <ul class="front">
+                <li>
+                  <div class="frontcover">
+                  </div>
+                </li>
+                <li></li>
+              </ul>
+              <ul class="back">
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap");
+
+body {
+  /* font-family: sans-serif; */
+  font-family: "Londrina Outline", cursive;
+  font-size: 20rem;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.main {
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+}
+
+/* main p {
+  color: blueviolet;
+  color: rgb(0, 0, 255);
+} */
+
+.zero {
+  color: rgb(0, 0, 255);
+  transition: background-color 2s ease-out;
+}
+
+.zero:hover {
+  color: rgb(136, 44, 221);
+  cursor: pointer;
+}
+
+.one {
+  color: rgb(0, 0, 255);
+  transition: color 2s ease-out;
+}
+
+.one:hover {
+  color: blueviolet;
+  transform: rotate(180deg);
+  cursor: pointer;
+}
+
+.two {
+  color: rgb(0, 0, 255);
+}
+
+.two:hover {
+  color: rgb(136, 44, 221);
+  cursor: pointer;
+  transform: skew(45deg);
+}
+
+.three {
+  color: rgb(136, 44, 221);
+  cursor: pointer;
+  animation: bounce 0.5s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5);
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 200px, 0);
+  }
+}
+
+.btn {
+  width: 140px;
+  height: 50px;
+  background: rgb(136, 44, 221);
+  border-style: none;
+  color: #000;
+  text-transform: uppercase;
+  padding: 0.8rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background: rgb(0, 0, 255);
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: rgb(136, 44, 221);
+  text-decoration: none;
+}
+
+.container {
+  color: #fff;
+  font-size: 1rem;
+  font-family: sans-serif;
+  margin-bottom: 8rem;
+  position: relative;
+  width: 1320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 12rem;
+  margin-left: 100px;
+  text-align: center;
+}
+
+.book {
+  position: relative;
+  width: 190px;
+  height: 270px;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.front li {
+  background: rgb(22, 22, 22);
+  background: #fff;
+  border-radius: 10px;
+}
+
+.back li {
+  background: linear-gradient(
+    to bottom,
+    #f1ef49,
+    #a3f149,
+    #49f1bf,
+    #49a5f1,
+    #8949f1
+  );
+  border-radius: 10px;
+  width: 97.5%;
+}
+
+.front {
+  transform: rotateY(-34deg) translateZ(8px);
+}
+
+.back {
+  transform: rotateY(-15deg) translateZ(-8px);
+}
+
+.front,
+.back,
+.front li,
+.back li {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.front,
+.back {
+  transform-origin: 0% 100%;
+}
+
+.front {
+  transition: all 0.8s ease, z-index 0.6s;
+}
+
+.front li:last-child {
+  transform: rotateY(180deg) translateZ(2px);
+}
+
+.book:hover .front {
+  transform: rotateY(-145deg) translateZ(0);
+}
+
+.frontcover {
+  position: absolute;
+  background: rgb(0, 0, 0);
+  border: 1px solid #fff;
+  height: 100%;
+  width: 101%;
+  border-radius: 5px;
+}
